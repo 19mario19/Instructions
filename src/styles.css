@@ -1,1 +1,247 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    /* font-family: Helvetica, Arial, sans-serif; */
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+/* CSS Reset */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Box sizing reset */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    letter-spacing: -0.00875rem;
+
+    /* to adjust */
+    /* margin-bottom: 1rem; */
+
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.0075rem;
+
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+    letter-spacing: -0.00625rem;
+    
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+    letter-spacing: -0.00625rem;
+
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: -0.005rem;
+
+    margin-bottom: .75rem;
+}
+
+strong {
+    font-weight: 600;
+
+}
+
+:root {
+
+    --main-color: #375059;
+
+    --vivid-pink: oklch(69.02% .277 332.77);
+    --hot-pink: oklch(59.91% .239 8.14);
+    --electric-violet: oklch(53.18% .28 296.97);
+
+    --gray-1000: oklch(16.93% .004 285.95);
+    --gray-900: oklch(19.37% .006 300.98);
+    --gray-800: oklch(25.16% .008 308.11);
+    --gray-700: oklch(36.98% .014 302.71);
+    --gray-600: oklch(44% .019 306.08);
+    --gray-500: oklch(54.84% .023 304.99);
+    --gray-400: oklch(70.9% .015 304.04);
+    --gray-300: oklch(84.01% .009 308.34);
+    --gray-200: oklch(91.75% .004 301.42);
+    --gray-100: oklch(97.12% .002 325.59);
+}
+
+section {
+    & h2 {
+        margin-bottom: 1.5rem;
+
+        border-bottom: 1px solid var(--gray-200);
+
+        padding-bottom: 1rem;
+    }
+
+    & ul {
+        & li {
+            padding-left: 1rem;
+            position: relative;
+
+            & p::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                width: 5px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+
+                background-color: var(--main-color);
+                z-index: 1;
+            }
+        }
+    }
+}
