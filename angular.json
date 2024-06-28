@@ -13,13 +13,20 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": "src/locale/messages.fr.xlf",
+          "es": "src/locale/messages.es.xlf"
+        }
+      },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/como-instructions",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -31,12 +38,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -58,6 +60,12 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "es": {
+              "localize": ["es"]
             }
           },
           "defaultConfiguration": "production"
@@ -66,10 +74,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "COMO-Instructions:build:production"
+              "browserTarget": "COMO-Instructions:build:production"
             },
             "development": {
-              "buildTarget": "COMO-Instructions:build:development"
+              "browserTarget": "COMO-Instructions:build:development"
+            },
+            "fr": {
+              "browserTarget": "COMO-Instructions:build:fr"
+            },
+            "es": {
+              "browserTarget": "COMO-Instructions:build:es"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "COMO-Instructions:build"
+            "browserTarget": "COMO-Instructions:build"
           }
         },
         "test": {
