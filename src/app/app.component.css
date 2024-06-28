@@ -49,10 +49,10 @@
                 margin: 0;
 
                 & li {
-                    cursor: pointer;
                     list-style: none;
-
                     padding: 0.3rem;
+
+                  
 
                     opacity: 0.75;
 
@@ -78,6 +78,9 @@
                         &>li {
                             border: none;
                             font-weight: 500;
+                            /* border: 1px solid var(--gray-1000); */
+                            cursor: default;
+                        
                         }
                     }
 
@@ -87,8 +90,11 @@
                     }
 
                     & a {
+                        cursor: pointer;
                         text-decoration: none;
+                        /* border: 1px solid; */
                         color: var(--gray-700);
+
 
                         &.active {
                             background: -webkit-linear-gradient(var(--vivid-pink),
